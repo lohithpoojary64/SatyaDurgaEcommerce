@@ -1,16 +1,15 @@
 "use client"
-import { useRouter } from "next/navigation";
-import { Spin } from "antd";
+
+import Header from "@/components/Home/Header";
+import Navbar from "@/components/Home/Navbar";
 
 export default function Home() {
-   const router = useRouter();
-   setTimeout(() => {
-      router.push("/main");
-   }, 3000);
+
    return (
       <>
-         <div className=" h-[90vh] w-full flex justify-center items-center">
-            <Spin size="large" spinning />
+         <div className=" min-h-screen h-screen w-full">
+            <Navbar />
+            <Header />
          </div>
       </>
    );

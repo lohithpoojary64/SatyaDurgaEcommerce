@@ -4,7 +4,7 @@ import { Input } from "antd";
 import { CiSearch, CiGrid41 } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { MdAccountCircle } from "react-icons/md";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { CartContextData } from "@/context/CartContext";
@@ -15,13 +15,14 @@ export default function NavBar() {
    const cartData = useContext(CartContextData);
 
    return (
-      <div className="hidden w-full p-[20px]  border-b-2 border-gray-200 md:flex lg:flex justify-center items-center gap-[40px] hover:cursor-pointer">
+      <div className="hidden h-[150px] w-full p-[20px]  border-b-2 border-gray-200 md:flex lg:flex justify-center items-center gap-[40px] hover:cursor-pointer">
          <Image
             alt="logo"
             src={logo}
-            width={160}
-            height={190}
+            width={1600}
+            height={1000}
             onClick={() => router.push("/main")}
+            className="h-[130px] w-[150px]" 
          />
          <div>
             <Input
